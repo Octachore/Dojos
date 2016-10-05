@@ -1,0 +1,5 @@
+﻿	expression		->		term (('+' | '-') term)*
+	      term		->		factor (('*' | '/' | '%') factor)*
+	    factor		->		'-'? positiveFactor
+positiveFactor		->		NUMBER | ('(' expression ')')
+		NUMBER		->		[0-9]+
